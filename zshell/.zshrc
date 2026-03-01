@@ -10,6 +10,8 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export EDITOR="/usr/bin/nvim"
+export SUDO_EDITOR='/usr/bin/nvim'
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -115,6 +117,7 @@ alias cat="bat"
 alias grep="rg"
 alias code="codium"
 alias vim="nvim"
+alias vi="nvim"
 alias swappaper="waypaper --random"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
