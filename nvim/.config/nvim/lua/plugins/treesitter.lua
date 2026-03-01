@@ -6,10 +6,9 @@ return {
 		install_dir = vim.fn.stdpath("data") .. "/site",
 	},
 	config = function()
-		require("nvim-treesitter").setup()
 		require("nvim-treesitter").install({ "c_sharp", "lua" })
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "lua" },
+			pattern = { "lua", "cs" },
 			callback = function()
 				vim.treesitter.start()
 				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
