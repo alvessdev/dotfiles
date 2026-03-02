@@ -6,6 +6,7 @@ return {
 			"cssls",
 			"lua_ls",
 			"pyright",
+			"hyprls",
 		},
 	},
 	dependencies = {
