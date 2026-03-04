@@ -8,7 +8,7 @@ return {
 	config = function()
 		require("nvim-treesitter").install({ "c_sharp", "lua" })
 		vim.api.nvim_create_autocmd("FileType", {
-			pattern = { "lua", "cs" },
+			pattern = { "lua" },
 			callback = function()
 				vim.treesitter.start()
 				vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"

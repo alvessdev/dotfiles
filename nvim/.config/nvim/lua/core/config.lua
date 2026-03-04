@@ -2,7 +2,6 @@ local opt = vim.opt
 
 -- leader key for custom remap
 vim.g.mapleader = " "
-vim.g.maplocalleader = " "
 
 -- nerdfonts icons
 vim.g.have_nerd_font = true
