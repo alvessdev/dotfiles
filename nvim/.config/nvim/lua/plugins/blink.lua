@@ -29,8 +29,8 @@ return {
 			preset = "default",
 			["<Enter>"] = { "select_and_accept", "fallback" },
 			["<Tab>"] = { "select_and_accept", "fallback" },
-			["<C-k>"] = { "select_prev", "fallback" },
-			["<C-j>"] = { "select_next", "fallback" },
+			["<C-p>"] = { "select_prev", "fallback" },
+			["<C-n>"] = { "select_next", "fallback" },
 		},
 
 		appearance = {
