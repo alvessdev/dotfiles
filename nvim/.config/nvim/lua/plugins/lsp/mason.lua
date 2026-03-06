@@ -7,6 +7,7 @@ return {
 			"lua_ls",
 			"pyright",
 			"hyprls",
+			"jsonls",
 		},
 	},
 	dependencies = {
