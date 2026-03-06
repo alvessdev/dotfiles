@@ -1,7 +1,7 @@
 [
 	{
 		"label": "Logout",
-		"exec": "hyprctl distpatc exit",
+		"exec": "hyprctl dispatch exit",
 		"icon": "/usr/share/nwg-bar/images/system-log-out.svg"
 	},
 	{
@@ -11,7 +11,7 @@
 	},
 	{
 		"label": "Shutdown",
-		"exec": "systemctl -i poweroff",
+		"exec": "sleep 4;systemctl -i poweroff",
 		"icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
 	},
 	{
