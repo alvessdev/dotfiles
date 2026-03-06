@@ -56,7 +56,7 @@ opt.inccommand = "split"
 opt.cursorline = true
 
 -- minimum distance between edges of screen (up and down) relative to the cursorline
-opt.scrolloff = 10
+opt.scrolloff = 15
 
 opt.confirm = true
 
