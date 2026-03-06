@@ -16,13 +16,13 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
 	keyword input:scroll_method no_scroll;\
     	keyword decoration:inactive_opacity 1
 	"
-    killall ashell
+    killall waybar
     hyprctl notify 1 5000 "rgb(40a02b)" "Gamemode [ON]"
     exit
 else
     hyprctl notify 1 5000 "rgb(d20f39)" "Gamemode [OFF]"
     hyprctl reload
-    ashell
+    waybar
     exit 0
 fi
 exit 1

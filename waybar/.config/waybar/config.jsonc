@@ -13,6 +13,7 @@
 	"reload_style_on_change": true,
 	// Choose the order of the modules
 	"modules-left": [
+		"custom/arch",
 		"hyprland/workspaces",
 	],
 	"modules-center": [
@@ -26,10 +27,17 @@
 		"clock",
 		"custom/power"
 	],
+	"group/linux": {
+		"orientation": "horizontal",
+		"modules": [
+			"hyprland/workspaces",
+		]
+	},
 	"disk": {
 		"interval": 30,
 		"format": "{percentage_used}%  ",
-		"path": "/"
+		"path": "/",
+		"on-click": "kitty --hold /usr/bin/yazi"
 	},
 	"tray": {
 		// "icon-size": 21,
@@ -45,11 +53,11 @@
 		"format-alt": "{:%Y-%m-%d}"
 	},
 	"cpu": {
-		"format": "{usage}% ",
+		"format": "{usage}%  ",
 		"tooltip": true
 	},
 	"memory": {
-		"format": "{}% "
+		"format": "{}%  "
 	},
 	"custom/power": {
 		"format": "⏻ ",
@@ -70,5 +78,11 @@
 		//	"persistent-workspaces": {
 		//		"*": 5, // 5 workspaces by default on every monitor
 		//	}
+	},
+	"custom/arch": {
+		"format": "  ",
+		"tooltip": false,
+		"on-click": "kitty ~/dotfiles/",
+		"on-click-right": "kitty ~/Documents/projects/"
 	}
 }

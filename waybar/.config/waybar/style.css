@@ -41,9 +41,6 @@ button:hover {
 }
 
 /* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-	background-color: #a37800;
-}
 
 #workspaces button {
 	padding: 0 5px;
@@ -53,7 +50,8 @@ button:hover {
 }
 
 #workspaces button:hover {
-	background: rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.1);
+	color: white;
 }
 
 #workspaces button.focused,
@@ -65,6 +63,27 @@ button:hover {
 	background-color: #f7768e;
 }
 
+.modules-left #workspaces {
+	background-color: #7aa2f7;
+	border-radius: 16px;
+	margin-left: 0;
+}
+
+
+.modules-left #custom-arch {
+	background-color: #414868;
+	border-radius: 16px;
+	padding: 5px;
+	margin-left: 0;
+	color: #bb9af7;
+}
+
+.modules-right {
+	border-radius: 16px;
+	margin-right: 0;
+}
+
+
 
 #clock,
 #cpu,
@@ -73,7 +92,7 @@ button:hover {
 #pulseaudio,
 #tray {
 	padding: 0 10px;
-	color: #ffffff;
+	color: #1a1b26;
 	border-radius: 16px;
 }
 
@@ -86,21 +105,9 @@ button:hover {
 	background-color: #bb9af7;
 }
 
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left>widget:first-child>#workspaces {
-	background-color: #7aa2f7;
-	border-radius: 16px;
-	margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right>widget:last-child>#workspaces {
-	margin-right: 0;
-}
-
 
 #clock {
-	background-color: #64727D;
+	background-color: #a9b1d6;
 }
 
 @keyframes blink {
@@ -117,26 +124,15 @@ label:focus {
 }
 
 #cpu {
-	background-color: #2ecc71;
-	color: #000000;
+	background-color: #9ece6a;
 }
 
 #memory {
-	background-color: #9b59b6;
+	background-color: #bb9af7;
 }
 
 #disk {
-	background-color: #964B00;
-}
-
-#pulseaudio {
-	background-color: #f1c40f;
-	color: #000000;
-}
-
-#pulseaudio.muted {
-	background-color: #90b1b1;
-	color: #2a5c45;
+	background-color: #f7768e;
 }
 
 #temperature {
@@ -163,3 +159,18 @@ label:focus {
 #custom-power {
 	color: #f7768e;
 }
+
+/* If workspaces is the leftmost module, omit left margin
+.modules-left>widget:first-child>#workspaces {
+	background-color: #7aa2f7;
+	border-radius: 16px;
+	margin-left: 0;
+}
+
+If workspaces is the rightmost module, omit right margin
+.modules-right>widget:last-child>#workspaces {
+	background-color: #7aa2f7;
+	border-radius: 16px;
+	margin-right: 0;
+}
+*/
