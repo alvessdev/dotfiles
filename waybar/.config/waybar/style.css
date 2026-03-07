@@ -60,7 +60,7 @@ button:hover {
 }
 
 #workspaces button.urgent {
-	background-color: #f7768e;
+	color: #f7768e;
 }
 
 .modules-left #workspaces {
