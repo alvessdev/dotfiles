@@ -27,5 +27,10 @@
 			"active": "",
 			"default": ""
 		},
-	}
+	},
+	"custom/power": {
+		"format": "⏻ ",
+		"tooltip": false,
+		"on-click": "nwg-bar -t niri.json"
+	},
 }

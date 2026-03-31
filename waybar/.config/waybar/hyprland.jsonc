@@ -24,6 +24,7 @@
 		"format": "&#x202b;{icon}&#x202c;",
 		"format-icons": {
 			"11": " 󰊗",
+			"12": " ",
 			//	"active": "",
 			//	"default": ""
 		},
@@ -32,5 +33,10 @@
 		//	"persistent-workspaces": {
 		//		"*": 5, // 5 workspaces by default on every monitor
 		//	}
-	}
+	},
+	"custom/power": {
+		"format": "⏻ ",
+		"tooltip": false,
+		"on-click": "nwg-bar -t hyprland.json"
+	},
 }

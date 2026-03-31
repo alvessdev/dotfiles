@@ -36,7 +36,7 @@ opt.smartcase = true
 opt.signcolumn = "yes"
 
 -- time in milliseconds to wait for a mapped sequence to complete
-opt.timeoutlen = 500
+opt.timeoutlen = 300
 
 -- time(ms) to update swapfile when nothing is typed
 opt.updatetime = 1000
