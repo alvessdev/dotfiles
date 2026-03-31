@@ -13,6 +13,7 @@ binds {
     Print { spawn-sh "flameshot gui"; }
     Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
 
+    Mod+E { spawn "nautilus"; }
 	Mod+P { spawn-sh "hyprpicker -a"; }
     Mod+Shift+E { quit; }
     Mod+Shift+P { power-off-monitors; }
