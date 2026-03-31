@@ -1,0 +1,3 @@
+debug {
+	skip-cursor-only-updates-during-vrr
+}

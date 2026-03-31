@@ -1,0 +1,18 @@
+// Add lines like this to spawn processes at startup.
+// Note that running niri as a session supports xdg-desktop-autostart,
+// which may be more convenient to use.
+// See the binds section below for more spawn examples.
+
+// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
+// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+
+// This line starts waybar, a commonly used bar for Wayland compositors.
+spawn-at-startup "~/.config/niri/scripts/waybar.sh"
+spawn-at-startup "swayosd-server"
+spawn-at-startup "swaync"
+spawn-at-startup "nm-applet"
+spawn-sh-at-startup "waypaper --random"
+spawn-sh-at-startup "cliphist wipe"
+spawn-sh-at-startup "wl-paste --watch cliphist store"
+spawn-sh-at-startup "aa-notify -p -s 1 -w 60 -f /var/log/audit/audit.log"
+spawn-sh-at-startup "systemctl --user start plasma-polkit-agent.service"

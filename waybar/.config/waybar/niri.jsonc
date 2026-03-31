@@ -1,0 +1,31 @@
+{
+	"include": [
+		"main.jsonc"
+	],
+	// Choose the order of the modules
+	"modules-left": [
+		"custom/arch",
+		"niri/workspaces",
+	],
+	"modules-center": [
+		"niri/window",
+	],
+	"modules-right": [
+		"tray",
+		"cpu",
+		"memory",
+		"disk",
+		"clock",
+		"custom/power"
+	],
+	"niri/workspaces": {
+		"format": "{icon}",
+		"format-icons": {
+			// Named workspaces
+			// (you need to configure them in niri)
+			// Icons by state
+			"active": "",
+			"default": ""
+		},
+	}
+}

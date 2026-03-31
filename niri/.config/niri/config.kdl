@@ -1,0 +1,8 @@
+include "modules/input.kdl"
+include "modules/autostart.kdl"
+include "modules/monitors.kdl"
+include "modules/binds.kdl"
+include "modules/misc.kdl"
+include "modules/layout.kdl"
+include "modules/animations.kdl"
+include "modules/rules.kdl"

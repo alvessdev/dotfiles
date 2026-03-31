@@ -1,5 +1,8 @@
 // -*- mode: jsonc -*-
 {
+	"include": [
+		"modules/niri.jsonc"
+	],
 	"layer": "top", // Waybar at top layer
 	// "position": "bottom", // Waybar position (top|bottom|left|right)
 	"height": 30, // Waybar height (to be removed for auto height)
@@ -11,28 +14,6 @@
 	"margin-left": 10,
 	"start_hidden": false,
 	"reload_style_on_change": true,
-	// Choose the order of the modules
-	"modules-left": [
-		"custom/arch",
-		"hyprland/workspaces",
-	],
-	"modules-center": [
-		"hyprland/window"
-	],
-	"modules-right": [
-		"tray",
-		"cpu",
-		"memory",
-		"disk",
-		"clock",
-		"custom/power"
-	],
-	"group/linux": {
-		"orientation": "horizontal",
-		"modules": [
-			"hyprland/workspaces",
-		]
-	},
 	"disk": {
 		"interval": 30,
 		"format": "{percentage_used}%  ",
@@ -63,21 +44,6 @@
 		"format": "⏻ ",
 		"tooltip": false,
 		"on-click": "nwg-bar"
-	},
-	"hyprland/workspaces": {
-		"active-only": false,
-		"hide-active": false,
-		"format": "&#x202b;{icon}&#x202c;",
-		"format-icons": {
-			"11": " 󰊗",
-			//	"active": "",
-			//	"default": ""
-		},
-		"show-special": true,
-		"special-visible-only": true,
-		//	"persistent-workspaces": {
-		//		"*": 5, // 5 workspaces by default on every monitor
-		//	}
 	},
 	"custom/arch": {
 		"format": "  ",

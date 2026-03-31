@@ -22,7 +22,7 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
 else
     hyprctl notify 1 5000 "rgb(d20f39)" "Gamemode [OFF]"
     hyprctl reload
-    waybar
+    ./waybar.sh
     exit 0
 fi
 exit 1

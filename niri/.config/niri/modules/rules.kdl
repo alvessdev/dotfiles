@@ -1,0 +1,34 @@
+// waybar
+layer-rule {
+	match namespace="waybar"
+	opacity 0.99
+}
+
+// Picture-in-Picture
+window-rule {
+    // This app-id regular expression will work for both:
+    // - host Firefox (app-id is "firefox")
+    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
+    match title="^Picture-in-Picture$"
+    open-floating true
+	default-column-width { fixed 720; }
+    default-window-height { fixed 405; }
+}
+
+// Example: enable rounded corners for all windows.
+// (This example rule is commented out with a "/-" in front.)
+/-window-rule {
+    geometry-corner-radius 12
+    clip-to-geometry true
+}
+
+
+// Game rules
+window-rule {
+	match app-id="steam_app_.*"
+	match app-id="Terraria.*"
+	match app-id="Minecraft.*"
+
+	variable-refresh-rate true
+}
+

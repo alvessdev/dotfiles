@@ -1,0 +1,36 @@
+{
+	"include": [
+		"main.jsonc"
+	],
+	// Choose the order of the modules
+	"modules-left": [
+		"custom/arch",
+		"hyprland/workspaces",
+	],
+	"modules-center": [
+		"hyprland/window",
+	],
+	"modules-right": [
+		"tray",
+		"cpu",
+		"memory",
+		"disk",
+		"clock",
+		"custom/power"
+	],
+	"hyprland/workspaces": {
+		"active-only": false,
+		"hide-active": false,
+		"format": "&#x202b;{icon}&#x202c;",
+		"format-icons": {
+			"11": " 󰊗",
+			//	"active": "",
+			//	"default": ""
+		},
+		"show-special": true,
+		"special-visible-only": true,
+		//	"persistent-workspaces": {
+		//		"*": 5, // 5 workspaces by default on every monitor
+		//	}
+	}
+}
