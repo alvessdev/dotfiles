@@ -8,6 +8,7 @@ return {
 			"pyright",
 			"hyprls",
 			"jsonls",
+			"clangd",
 		},
 	},
 	dependencies = {
