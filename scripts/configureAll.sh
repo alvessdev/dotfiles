@@ -1,14 +1,14 @@
 #/usr/bin/bash
-mkdir ~/old-config
+mkdir ~/old-config &> /dev/null
 
-mv ~/.config/kitty/ ~/old-config
-mv ~/.config/nvim/ ~/old-config
-mv ~/.config/waybar/ ~/old-config
-mv ~/.zshrc ~/old-config
-mv ~/.config/$1/ ~/old-config
+mv ~/.config/kitty/ ~/old-config &> /dev/null
+mv ~/.config/nvim/ ~/old-config &> /dev/null
+mv ~/.config/waybar/ ~/old-config &> /dev/null
+mv ~/.zshrc ~/old-config &> /dev/null
+mv ~/.config/$1/ ~/old-config &> /dev/null
 
-stow kitty
-stow nvim
-stow waybar
-stow zshell
-stow $1
+stow kitty &> /dev/null
+stow nvim &> /dev/null
+stow waybar &> /dev/null
+stow zshell &> /dev/null
+stow $1 &> /dev/null
