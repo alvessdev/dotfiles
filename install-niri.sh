@@ -12,4 +12,5 @@ chmod +x scripts/**
 ./scripts/install-waybar.sh
 ./scripts/install-rofi-and-themes.sh
 ./scripts/configureAll.sh niri
-
+sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
+sudo ln -s ~/dotfiles/niri/.config/niri/scripts/niri-waybar /usr/local/bin/ &> /dev/null

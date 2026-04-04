@@ -20,3 +20,5 @@ source = $HOME/.config/hypr/modules/layouts/master/master.conf
 ./scripts/install-waybar.sh
 ./scripts/install-rofi-and-themes.sh
 ./scripts/configureAll.sh hypr
+sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
+sudo ln -s ~/dotfiles/hypr/.config/hypr/scripts/hypr-waybar /usr/local/bin/ &> /dev/null

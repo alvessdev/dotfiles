@@ -7,7 +7,7 @@
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 // This line starts waybar, a commonly used bar for Wayland compositors.
-spawn-at-startup "~/.config/niri/scripts/waybar.sh"
+spawn-at-startup "niri-waybar"
 spawn-at-startup "swayosd-server"
 spawn-at-startup "swaync"
 spawn-at-startup "nm-applet"

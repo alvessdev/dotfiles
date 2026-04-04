@@ -1,7 +1,6 @@
 #!/bin/bash
 hyprModulesPath="$HOME/.config/hypr/modules"
-rofi="$HOME/.config/rofi/launcher.sh"
-option=$(printf 'Dwindle\nScrolling\nMaster\nMonocle' | $rofi -dmenu -i -p "Layout")
+option=$(printf 'Dwindle\nScrolling\nMaster\nMonocle' | themed-rofi -dmenu -i -p "Layout")
 if [[ $option == "Dwindle" ]] ; then
 	cp "$hyprModulesPath/layouts/dwindle/dwindle-layout.conf" "$hyprModulesPath/current-layout.conf"
 elif [[ $option == "Scrolling" ]] then
