@@ -5,9 +5,8 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+Space hotkey-overlay-title="Open app launcher" { spawn-sh "killall rofi || themed-rofi -show drun"; }
+    Mod+D hotkey-overlay-title="Open app launcher" { spawn-sh "killall rofi || themed-rofi -show drun"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+C repeat=false { close-window; }
     Print { spawn-sh "flameshot gui"; }
@@ -16,6 +15,7 @@ binds {
     Mod+E { spawn "nautilus"; }
 	Mod+P { spawn-sh "hyprpicker -a"; }
     Mod+Shift+E { quit; }
+    Mod+N { spawn-sh "swaync-client -t" ; }
     Mod+Shift+P { power-off-monitors; }
 
 	Mod+Backspace { spawn-sh "killall waybar || niri-waybar"; }
