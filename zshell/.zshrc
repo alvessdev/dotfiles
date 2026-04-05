@@ -126,3 +126,4 @@ alias swappaper="waypaper --random"
 
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/zshell/.p10k.zsh.
 [[ ! -f ~/dotfiles/zshell/.p10k.zsh ]] || source ~/dotfiles/zshell/.p10k.zsh
+eval "$(zoxide init zsh)"

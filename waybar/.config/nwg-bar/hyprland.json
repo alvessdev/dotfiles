@@ -11,7 +11,7 @@
 	},
 	{
 		"label": "Shutdown",
-		"exec": "hyprctl dispatch execr $(sleep 5; shutdown now)",
+		"exec": "systemctl poweroff",
 		"icon": "/usr/share/nwg-bar/images/system-shutdown.svg"
 	},
 	{
