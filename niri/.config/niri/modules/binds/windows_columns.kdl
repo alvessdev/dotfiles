@@ -4,8 +4,6 @@ binds {
     Mod+Up    { focus-window-up; }
     Mod+Right { focus-column-right; }
     Mod+H     { focus-column-left; }
-   // Mod+J     { focus-window-down; }
-   // Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
 
 
@@ -116,6 +114,8 @@ binds {
     Mod+Equal { set-column-width "+10%"; }
 
     // Finer height adjustments when in column with other windows.
+    Mod+Shift+H { set-window-height "-10%"; }
+    Mod+Shift+L { set-window-height "+10%"; }
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
