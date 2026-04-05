@@ -9,6 +9,8 @@ vim.diagnostic.config({
 			[severity.INFO] = " ",
 		},
 	},
+	virtual_text = true,
+	update_in_insert = true,
 })
 
 local key = vim.keymap
@@ -23,10 +25,15 @@ key.set("n", "K", lsp.buf.hover, { desc = "Hover" })
 key.set("n", "gk", lsp.buf.signature_help, { desc = "Signature help" })
 key.set("n", "<leader>ca", lsp.buf.code_action, { desc = "Code actions" })
 key.set("n", "<leader>dd", vim.diagnostic.open_float, { desc = "Show line diagnostic" })
+key.set("n", "<leader>ds", function()
+	vim.diagnostic.config({
+		virtual_text = not vim.diagnostic.config().virtual_text,
+	})
+end, { desc = "Show all diagnostic" })
 key.set("n", "<leader>dn", function()
-	vim.diagnostic.jump({ count = 1, float = true })
+	vim.diagnostic.jump({ count = 1, float = not vim.diagnostic.config().virtual_text })
 end, { desc = "Next diagnostic" })
 key.set("n", "<leader>dp", function()
-	vim.diagnostic.jump({ count = -1, float = true })
+	vim.diagnostic.jump({ count = -1, float = not vim.diagnostic.config().virtual_text })
 end, { desc = "Previous diagnostic" })
 key.set("n", "<leader>rn", vim.lsp.buf.rename, { desc = "rename" })
