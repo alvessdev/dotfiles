@@ -1,5 +1,5 @@
 #/usr/bin/bash
-yay -S niri hyprpicker xwayland-satellite xdg-desktop-portal-gnome \
+yay -S niri stow nautilus curl hyprpicker xwayland-satellite xdg-desktop-portal-gnome \
 	xdg-desktop-portal-gtk gnome-keyring kitty polkit-kde-agent \
 	swaync waypaper swaybg xdg-desktop-portal wl-clipboard cliphist \
 	flameshot playerctl network-manager-applet --needed --noconfirm
