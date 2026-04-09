@@ -1,4 +1,4 @@
-my dotfiles
+my dotfiles for archlinux
 use at your own risk
 
 `git clone https://github.com/alvessdev/dotfiles.git ~/dotfiles`

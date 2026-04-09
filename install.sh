@@ -55,6 +55,7 @@ backup() {
 	cp -L ~/.p10k.zsh ~/old-config &> /dev/null
 	cp -rL ~/.config/rofi/ ~/old-config &> /dev/null
 	cp -rL ~/.config/kitty/ ~/old-config &> /dev/null
+	cd ~/dotfiles/
 }
 
 installNiri() {
