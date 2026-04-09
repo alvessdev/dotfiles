@@ -32,12 +32,18 @@ installPrograms() {
 installHyprland() {
 	backup
 	cp -r ~/.config/hypr ~/old-config &> /dev/null
-	echo Installing yay
-	./scripts/install-yay.sh
+
+	installYay
 
 	echo Installing hyprland
 	./scripts/install-hyprland.sh
 	installPrograms
+}
+
+installYay() {
+	echo Installing yay
+	./scripts/install-yay.sh
+	cd ~/dotfiles/
 }
 
 backup() {
@@ -55,8 +61,7 @@ installNiri() {
 	backup
 	cp -r ~/.config/niri ~/old-config &> /dev/null
 
-	echo Installing yay
-	./scripts/install-yay.sh
+	installYay
 
 	echo Installing niri
 	./scripts/install-niri.sh
