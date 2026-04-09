@@ -31,7 +31,7 @@ installPrograms() {
 
 installHyprland() {
 	backup
-	cp -r ~/.config/hypr ~/old-config &> /dev/null
+	cp -rL ~/.config/hypr ~/old-config &> /dev/null
 
 	installYay
 
@@ -49,17 +49,17 @@ installYay() {
 backup() {
 	echo "Creating backup folder with old config files (~/old-config)"
 	mkdir ~/old-config/ &> /dev/null
-	cp -r ~/.config/waybar ~/old-config &> /dev/null
-	cp -r ~/.config/nvim ~/old-config &> /dev/null
-	cp ~/.zshrc ~/old-config &> /dev/null
-	cp ~/.p10k.zsh ~/old-config &> /dev/null
-	cp -r ~/.config/rofi/ ~/old-config &> /dev/null
-	cp -r ~/.config/kitty/ ~/old-config &> /dev/null
+	cp -rL ~/.config/waybar ~/old-config &> /dev/null
+	cp -rL ~/.config/nvim ~/old-config &> /dev/null
+	cp -L ~/.zshrc ~/old-config &> /dev/null
+	cp -L ~/.p10k.zsh ~/old-config &> /dev/null
+	cp -rL ~/.config/rofi/ ~/old-config &> /dev/null
+	cp -rL ~/.config/kitty/ ~/old-config &> /dev/null
 }
 
 installNiri() {
 	backup
-	cp -r ~/.config/niri ~/old-config &> /dev/null
+	cp -rL ~/.config/niri ~/old-config &> /dev/null
 
 	installYay
 
