@@ -1,6 +1,4 @@
 #!/bin/sh
-chmod +x scripts/**
-
 yay -S --needed --noconfirm stow hyprland swaync waypaper swaybg curl stow \
 	hypridle hyprpolkitagent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland \
 	xdg-desktop-portal-gtk xdg-desktop-portal network-manager-applet wl-clipboard \
@@ -14,11 +12,7 @@ general {
 source = $HOME/.config/hypr/modules/layouts/master/master.conf
 ''' >> hypr/.config/hypr/modules/current-layout.conf
 
-./scripts/install-kitty.sh
-./scripts/install-zsh.sh
-./scripts/install-nvim.sh
-./scripts/install-waybar.sh
-./scripts/install-rofi-and-themes.sh
-./scripts/configureAll.sh hypr
 sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
 sudo ln -s ~/dotfiles/hypr/.config/hypr/scripts/hypr-waybar /usr/local/bin/ &> /dev/null
+rm -rf ~/.config/hypr &> /dev/null
+stow -d ~/dotfiles/ hypr
