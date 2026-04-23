@@ -28,6 +28,7 @@ window-rule {
 	match app-id="steam_app_.*"
 	match app-id="Terraria.*"
 	match app-id="Minecraft.*"
+	match app-id="blackops.*"
 
 	variable-refresh-rate true
 	open-maximized true
