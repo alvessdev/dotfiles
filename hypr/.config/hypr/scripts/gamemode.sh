@@ -17,12 +17,14 @@ if [ "$HYPRGAMEMODE" = 1 ] ; then
     	keyword decoration:inactive_opacity 1
 	"
     killall waybar
+	pkill hypridle
     hyprctl notify 1 5000 "rgb(40a02b)" "Gamemode [ON]"
     exit
 else
     hyprctl notify 1 5000 "rgb(d20f39)" "Gamemode [OFF]"
     hyprctl reload
     hypr-waybar
+	hypridle
     exit 0
 fi
 exit 1
