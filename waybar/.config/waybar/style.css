@@ -84,13 +84,13 @@ button:hover {
 }
 
 
-
 #clock,
 #cpu,
 #memory,
 #disk,
 #pulseaudio,
-#tray {
+#tray,
+#language {
 	padding: 0 10px;
 	color: #1a1b26;
 	border-radius: 16px;
@@ -154,6 +154,11 @@ label:focus {
 #tray>.needs-attention {
 	-gtk-icon-effect: highlight;
 	background-color: #f7768e;
+}
+
+#language {
+	background-color: #faba4a;
+	color: #16161e;
 }
 
 #custom-power {

@@ -12,6 +12,7 @@
 	],
 	"modules-right": [
 		"tray",
+		"niri/language",
 		"cpu",
 		"memory",
 		"disk",
@@ -33,4 +34,11 @@
 		"tooltip": false,
 		"on-click": "nwg-bar -t niri.json"
 	},
+	"niri/language": {
+		"format": "{}",
+		"format-en": "US",
+		"format-en-intl": "US-INTL",
+		"format-pt": "PT-BR",
+		"on-click": "niri msg action switch-layout next"
+	}
 }
