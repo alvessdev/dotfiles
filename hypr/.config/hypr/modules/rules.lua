@@ -1,6 +1,4 @@
-local wRule = hl.window_rule
-
-wRule({
+hl.window_rule({
 	match = {
 		initial_title = "Steam — Configurações",
 	},
@@ -8,7 +6,7 @@ wRule({
 	center = true,
 })
 
-wRule({
+hl.window_rule({
 	match = {
 		initial_title = "Picture-in-Picture",
 	},
@@ -19,14 +17,14 @@ wRule({
 	pin = true,
 })
 
-wRule({
+hl.window_rule({
 	match = {
 		class = "app.zen_browser.zen",
 	},
 	opaque = true,
 })
 
-wRule({
+hl.window_rule({
 	match = {
 		title = "^(.*nvim.*)$",
 	},
@@ -36,7 +34,7 @@ wRule({
 local floatWindows = { "blueman-manager", "waypaper", "org.pulseaudio.pavucontrol" }
 
 for i = 1, #floatWindows do
-	wRule({
+	hl.window_rule({
 		match = {
 			class = floatWindows[i],
 		},
@@ -49,7 +47,7 @@ end
 local games = { "^(steam_app_.*)$", "^(Minecraft*.*)$", "^(blackops.*)$", "^(Hollow.*)$" }
 
 for i = 1, #games do
-	wRule({
+	hl.window_rule({
 		match = {
 			initial_class = games[i],
 		},
@@ -58,7 +56,7 @@ for i = 1, #games do
 	})
 end
 
-wRule({
+hl.window_rule({
 	match = {
 		initial_title = "^(Terraria.*)$",
 	},
@@ -66,6 +64,30 @@ wRule({
 	workspace = "11 silent",
 })
 --
+
+hl.window_rule({
+	match = {
+		initial_title = "^(Enter name of file to save to….*)$",
+	},
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		initial_title = "^(File Upload.*)$",
+	},
+	float = true,
+	center = true,
+})
+
+hl.window_rule({
+	match = {
+		title = "File Operation Progress",
+	},
+	float = true,
+	center = true,
+})
 
 local suppressMaximizeRule = hl.window_rule({
 	-- Ignore maximize requests from all apps. You'll probably like this.
@@ -98,6 +120,13 @@ hl.window_rule({
 --     no_anim = true,
 -- })
 -- overlayLayerRule:set_enabled(false)
+
+hl.layer_rule({
+	match = {
+		namespace = "rofi",
+	},
+	dim_around = true,
+})
 
 -- Hyprland-run windowrule
 -- hl.window_rule({
