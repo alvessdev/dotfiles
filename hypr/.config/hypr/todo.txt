@@ -1,4 +1,4 @@
-gamemode
+zoom
 config workspace
 layout switcher
 rules
