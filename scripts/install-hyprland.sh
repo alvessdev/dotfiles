@@ -4,13 +4,7 @@ yay -S --needed --noconfirm stow hyprland swaync waypaper swaybg curl stow \
 	xdg-desktop-portal-gtk xdg-desktop-portal network-manager-applet wl-clipboard \
 	xdg-utils go cliphist nautilus btop hyprpicker flameshot pavucontrol playerctl \
 	
-echo '''
-general {
-	layout = master
-}
-
-source = $HOME/.config/hypr/modules/layouts/master/master.conf
-''' >> hypr/.config/hypr/modules/current-layout.conf
+echo dwindle > hypr/.config/hypr/modules/.active_layout
 
 sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
 sudo ln -s ~/dotfiles/hypr/.config/hypr/scripts/hypr-waybar /usr/local/bin/ &> /dev/null
