@@ -1,36 +1,31 @@
--- Programs
-terminal = "kitty"
-fileManager = "nautilus"
-menu = "killall rofi || themed-rofi"
-scripts = "$HOME/.config/hypr/scripts"
+local function main()
+	_G.terminal = "kitty"
+	_G.fileManager = "nautilus"
+	_G.menu = "killall rofi || themed-rofi"
 
-require("modules.monitors")
-require("modules.autostart")
-require("modules.env")
-require("modules.permissions")
-require("modules.misc")
-require("modules.general")
-require("modules.deco")
-require("modules.animations")
-require("modules.input")
-require("modules.binds")
-require("modules.rules")
+	local home = os.getenv("HOME")
+	_G.hypr_path = home .. "/.config/hypr/"
+	_G.scripts_path = hypr_path .. "scripts/"
 
-hl.config({
-	dwindle = {
-		preserve_split = true, -- You probably want this
-		permanent_direction_override = false,
-	},
-})
+	require("modules.monitors")
+	require("modules.autostart")
+	require("modules.env")
+	require("modules.permissions")
+	require("modules.misc")
+	require("modules.general")
+	require("modules.deco")
+	require("modules.animations")
+	require("modules.input")
+	require("modules.binds")
+	require("modules.rules")
+	require("modules.layout")
+end
 
-hl.config({
-	master = {
-		new_status = "master",
-	},
-})
+function _G.dbg(txt)
+	hl.notification.create({
+		text = txt,
+		duration = 3000,
+	})
+end
 
-hl.config({
-	scrolling = {
-		fullscreen_on_one_column = true,
-	},
-})
+main()

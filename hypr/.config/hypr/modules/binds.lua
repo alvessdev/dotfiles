@@ -2,7 +2,13 @@ local dsp = hl.dsp
 local bind = hl.bind
 local cmd = dsp.exec_cmd
 
-function main()
+-- functions
+local windows
+local workspace
+local fn
+local gamemode
+
+local function main()
 	bind("SUPER + T", dsp.exec_cmd(terminal))
 	local closeWindowBind = bind("SUPER + C", hl.dsp.window.close())
 	-- closeWindowBind:set_enabled(false)
@@ -14,19 +20,20 @@ function main()
 	bind("SUPER + P", cmd("hyprpicker -a"))
 	bind(
 		"SUPER + period",
-		cmd(menu .. " -modi clipboard:" .. scripts .. "/cliphist-rofi-img.sh -show clipboard -show-icons")
+		cmd(menu .. " -modi clipboard:" .. scripts_path .. "cliphist-rofi-img.sh -show clipboard -show-icons")
 	)
 	bind("PRINT", cmd("flameshot gui"))
 	bind("SUPER + N", cmd("swaync-client -t -sw"))
-	hl.bind("SUPER + SHIFT + P", function()
+	bind("SUPER + SHIFT + P", function()
 		hl.timer(function()
 			hl.dispatch(hl.dsp.dpms({ action = "disable" }))
 		end, { timeout = 500, type = "oneshot" })
 	end)
-	hl.bind(
+	bind(
 		"SUPER + SHIFT + E",
 		hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 	)
+	bind("SUPER + Y", cmd("killall rofi || " .. scripts_path .. "changeLayout.sh"))
 
 	workspace()
 	bind("SUPER + CTRL + G", gamemode)
@@ -34,7 +41,7 @@ function main()
 	windows()
 end
 
-function windows()
+windows = function()
 	-- windows binds
 	bind("SUPER + F", dsp.window.fullscreen({ mode = "maximized" }))
 	bind("SUPER + SHIFT + F", dsp.window.fullscreen({ mode = "fullscreen" }))
@@ -74,7 +81,7 @@ function windows()
 	hl.bind("SUPER + mouse:273", hl.dsp.window.resize(), { mouse = true })
 end
 
-function workspace()
+workspace = function()
 	-- workspaces config
 	-- Switch workspaces with mainMod + [0-9]
 	-- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -100,7 +107,7 @@ function workspace()
 	})
 end
 
-function gamemode()
+gamemode = function()
 	if hl.get_config("animations.enabled") then
 		hl.config({
 			animations = {
@@ -150,7 +157,7 @@ function gamemode()
 	})
 end
 
-function fn()
+fn = function()
 	-- fn keys
 	hl.bind(
 		"XF86AudioRaiseVolume",

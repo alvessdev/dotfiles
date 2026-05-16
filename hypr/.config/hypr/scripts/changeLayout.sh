@@ -2,12 +2,13 @@
 hyprModulesPath="$HOME/.config/hypr/modules"
 option=$(printf 'Dwindle\nScrolling\nMaster\nMonocle' | themed-rofi -dmenu -i -p "Layout")
 if [[ $option == "Dwindle" ]] ; then
-	cp "$hyprModulesPath/layouts/dwindle/dwindle-layout.conf" "$hyprModulesPath/current-layout.conf"
+	echo dwindle > "$hyprModulesPath/.active_layout"
 elif [[ $option == "Scrolling" ]] then
-	cp "$hyprModulesPath/layouts/scrolling/scrolling-layout.conf" "$hyprModulesPath/current-layout.conf"
+	echo scrolling > "$hyprModulesPath/.active_layout"
 elif [[ $option == "Master" ]] then
-	cp "$hyprModulesPath/layouts/master/master-layout.conf" "$hyprModulesPath/current-layout.conf"
+	echo master > "$hyprModulesPath/.active_layout"
 elif [[ $option == "Monocle" ]] then
-	cp "$hyprModulesPath/layouts/monocle/monocle-layout.conf" "$hyprModulesPath/current-layout.conf"
+	echo monocle > "$hyprModulesPath/.active_layout"
 fi
+
 hyprctl reload
