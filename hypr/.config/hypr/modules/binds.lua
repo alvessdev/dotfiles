@@ -17,7 +17,7 @@ local function main()
 	bind("SUPER + U", dsp.window.pseudo())
 	bind("SUPER + D", cmd(menu .. " -show drun"))
 	bind("SUPER + BACKSPACE", cmd("killall waybar || hypr-waybar"))
-	bind("SUPER + P", cmd("hyprpicker -a"))
+	bind("SUPER + P", cmd("killall hyprpicker|| hyprpicker -a"))
 	bind(
 		"SUPER + period",
 		cmd(menu .. " -modi clipboard:" .. scripts_path .. "cliphist-rofi-img.sh -show clipboard -show-icons")
