@@ -1,5 +1,5 @@
 #!/bin/sh
-yay -S --needed --noconfirm stow hyprland swaync awww curl stow \
+sudo pacman -S --needed --noconfirm stow hyprland swaync awww curl stow \
 	hypridle hyprpolkitagent qt5-wayland qt6-wayland xdg-desktop-portal-hyprland \
 	xdg-desktop-portal-gtk xdg-desktop-portal network-manager-applet wl-clipboard \
 	xdg-utils go cliphist nautilus btop hyprpicker flameshot pavucontrol playerctl \
