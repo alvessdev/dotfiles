@@ -119,7 +119,6 @@ alias cat="bat"
 alias grep="rg"
 alias code="codium"
 alias v="nvim"
-alias swappaper="waypaper --random"
 alias nvimf='nvim $(fd --hidden --type f | fzf)'
 alias cdf='cd $(fd --full-path . ~ --hidden --type d | fzf)'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

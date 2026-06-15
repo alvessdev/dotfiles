@@ -20,7 +20,6 @@ local function main()
 			follow_min_visible = 0.4,
 		},
 	})
-
 	local file = io.open(hypr_path .. "modules/.active_layout", "r")
 
 	if file then

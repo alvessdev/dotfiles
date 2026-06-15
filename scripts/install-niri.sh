@@ -1,7 +1,7 @@
 #/usr/bin/bash
 yay -S niri stow nautilus curl hyprpicker xwayland-satellite xdg-desktop-portal-gnome \
 	xdg-desktop-portal-gtk gnome-keyring kitty polkit-kde-agent \
-	swaync waypaper swaybg xdg-desktop-portal wl-clipboard cliphist \
+	swaync awww xdg-desktop-portal wl-clipboard cliphist \
 	flameshot playerctl network-manager-applet --needed --noconfirm
 
 sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
