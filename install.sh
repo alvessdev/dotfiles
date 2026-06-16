@@ -27,6 +27,9 @@ installPrograms() {
 
 	echo Installing fuzzel
 	./scripts/install-fuzzel.sh
+
+	echo Downloding wallpapers
+	./scripts/download-wallpapers.sh
 }
 
 installHyprland() {
