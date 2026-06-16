@@ -1,2 +1,0 @@
-#!/bin/bash
-rofi -theme "launchers/type-4/style-2.rasi" $*

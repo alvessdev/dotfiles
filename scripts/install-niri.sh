@@ -4,7 +4,6 @@ sudo pacman -S niri stow nautilus curl hyprpicker xwayland-satellite xdg-desktop
 	swaync awww xdg-desktop-portal wl-clipboard cliphist \
 	flameshot playerctl network-manager-applet --needed --noconfirm
 
-sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
 sudo ln -s ~/dotfiles/niri/.config/niri/scripts/niri-waybar /usr/local/bin/ &> /dev/null
 rm -rf ~/.config/niri &> /dev/null
 stow -d ~/dotfiles/ niri

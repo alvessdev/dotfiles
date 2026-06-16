@@ -6,7 +6,6 @@ sudo pacman -S --needed --noconfirm stow hyprland swaync awww curl stow \
 	
 echo dwindle > hypr/.config/hypr/modules/.active_layout
 
-sudo ln -s ~/dotfiles/scripts/global/themed-rofi /usr/local/bin/ &> /dev/null
 sudo ln -s ~/dotfiles/hypr/.config/hypr/scripts/hypr-waybar /usr/local/bin/ &> /dev/null
 rm -rf ~/.config/hypr &> /dev/null
 stow -d ~/dotfiles/ hypr

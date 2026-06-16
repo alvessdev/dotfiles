@@ -25,8 +25,8 @@ installPrograms() {
 	echo Installing waybar
 	./scripts/install-waybar.sh
 
-	echo Installing rofi and themes from https://github.com/adi1090x/rofi
-	./scripts/install-rofi-and-themes.sh
+	echo Installing fuzzel
+	./scripts/install-fuzzel.sh
 }
 
 installHyprland() {
@@ -45,7 +45,7 @@ backup() {
 	cp -rL ~/.config/nvim ~/old-config &> /dev/null
 	cp -L ~/.zshrc ~/old-config &> /dev/null
 	cp -L ~/.p10k.zsh ~/old-config &> /dev/null
-	cp -rL ~/.config/rofi/ ~/old-config &> /dev/null
+	cp -rL ~/.config/fuzzel/ ~/old-config &> /dev/null
 	cp -rL ~/.config/kitty/ ~/old-config &> /dev/null
 	cd ~/dotfiles/
 }
