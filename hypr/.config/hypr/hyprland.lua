@@ -19,9 +19,6 @@ local function main()
 	require("modules.binds")
 	require("modules.rules")
 	require("modules.layout")
-	hl.exec_cmd(
-		"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
-	)
 end
 
 function _G.dbg(txt)
