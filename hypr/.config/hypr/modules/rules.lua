@@ -123,7 +123,7 @@ hl.window_rule({
 
 hl.layer_rule({
 	match = {
-		namespace = "rofi",
+		namespace = "launcher",
 	},
 	dim_around = true,
 })

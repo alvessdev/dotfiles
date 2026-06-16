@@ -1,7 +1,7 @@
 local function main()
 	_G.terminal = "kitty"
 	_G.fileManager = "nautilus"
-	_G.menu = "killall rofi || themed-rofi"
+	_G.menu = "killall fuzzel || fuzzel"
 
 	local home = os.getenv("HOME")
 	_G.hypr_path = home .. "/.config/hypr/"

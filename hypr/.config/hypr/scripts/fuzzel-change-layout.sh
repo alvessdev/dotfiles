@@ -1,6 +1,6 @@
 #!/bin/bash
 hyprModulesPath="$HOME/.config/hypr/modules"
-option=$(printf 'Dwindle\nScrolling\nMaster\nMonocle' | themed-rofi -dmenu -i -p "Layout")
+option=$(printf 'Dwindle\nScrolling\nMaster\nMonocle' | fuzzel -d)
 if [[ $option == "Dwindle" ]] ; then
 	echo dwindle > "$hyprModulesPath/.active_layout"
 elif [[ $option == "Scrolling" ]] then

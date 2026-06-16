@@ -15,13 +15,10 @@ local function main()
 	bind("SUPER + E", cmd(fileManager))
 	bind("SUPER + V", dsp.window.float({ action = "toggle" }))
 	bind("SUPER + U", dsp.window.pseudo())
-	bind("SUPER + D", cmd(menu .. " -show drun"))
+	bind("SUPER + D", cmd(menu))
 	bind("SUPER + BACKSPACE", cmd("killall waybar || hypr-waybar"))
 	bind("SUPER + P", cmd("killall hyprpicker|| hyprpicker -a"))
-	bind(
-		"SUPER + period",
-		cmd(menu .. " -modi clipboard:" .. scripts_path .. "cliphist-rofi-img.sh -show clipboard -show-icons")
-	)
+	bind("SUPER + period", cmd("killall fuzzel || " .. scripts_path .. "cliphist-fuzzel-img.sh"))
 	bind("PRINT", cmd("flameshot gui"))
 	bind("SUPER + N", cmd("swaync-client -t -sw"))
 	bind("SUPER + SHIFT + P", function()
@@ -33,7 +30,7 @@ local function main()
 		"SUPER + SHIFT + E",
 		hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 	)
-	bind("SUPER + Y", cmd("killall rofi || " .. scripts_path .. "changeLayout.sh"))
+	bind("SUPER + Y", cmd("killall fuzzel || " .. scripts_path .. "fuzzel-change-layout.sh"))
 	bind(
 		"SUPER + ALT + W",
 		cmd(

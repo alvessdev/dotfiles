@@ -6,7 +6,7 @@ binds {
 
     Mod+T hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    Mod+D hotkey-overlay-title="Open app launcher" { spawn-sh "killall rofi || themed-rofi -show drun"; }
+    Mod+D hotkey-overlay-title="Open app launcher" { spawn-sh "killall fuzzel || fuzzel"; }
     Mod+O repeat=false { toggle-overview; }
     Mod+C repeat=false { close-window; }
     Print { spawn-sh "flameshot gui"; }
