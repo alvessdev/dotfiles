@@ -19,7 +19,9 @@ local function main()
 	require("modules.binds")
 	require("modules.rules")
 	require("modules.layout")
-	rand_paper()
+	hl.exec_cmd(
+		"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
+	)
 end
 
 function _G.dbg(txt)
@@ -27,12 +29,6 @@ function _G.dbg(txt)
 		text = txt,
 		duration = 3000,
 	})
-end
-
-function _G.rand_paper()
-	hl.exec_cmd(
-		"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
-	)
 end
 
 main()

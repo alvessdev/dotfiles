@@ -34,7 +34,12 @@ local function main()
 		hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 	)
 	bind("SUPER + Y", cmd("killall rofi || " .. scripts_path .. "changeLayout.sh"))
-	bind("SUPER + ALT + W", rand_paper)
+	bind(
+		"SUPER + ALT + W",
+		cmd(
+			"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
+		)
+	)
 
 	workspace()
 	bind("SUPER + CTRL + G", gamemode)
