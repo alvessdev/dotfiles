@@ -125,7 +125,7 @@ hl.layer_rule({
 	match = {
 		namespace = "launcher",
 	},
-	dim_around = true,
+	blur = true,
 })
 
 -- Hyprland-run windowrule
