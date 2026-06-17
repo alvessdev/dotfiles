@@ -17,7 +17,8 @@ binds {
     Mod+Shift+E { quit; }
     Mod+N { spawn-sh "swaync-client -t" ; }
     Mod+Shift+P { power-off-monitors; }
-    Mod+Alt+w { spawn-sh "awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"; }
+    Mod+Shift+w { spawn-sh "awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"; }
+    Mod+Alt+w { spawn-sh "~/dotfiles/scripts/wallpaperSelector.sh"; }
 
 	Mod+Backspace { spawn-sh "killall waybar || niri-waybar"; }
     // Actions to switch layouts.

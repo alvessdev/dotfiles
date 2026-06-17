@@ -32,11 +32,12 @@ local function main()
 	)
 	bind("SUPER + Y", cmd("killall fuzzel || " .. scripts_path .. "fuzzel-change-layout.sh"))
 	bind(
-		"SUPER + ALT + W",
+		"SUPER + SHIFT + W",
 		cmd(
 			"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
 		)
 	)
+	bind("SUPER + ALT + W", cmd("killall fuzzel || ~/dotfiles/scripts/wallpaperSelector.sh"))
 
 	workspace()
 	bind("SUPER + CTRL + G", gamemode)
