@@ -7,6 +7,7 @@ local windows
 local workspace
 local fn
 local gamemode
+local create_vitual_monitor
 
 local function main()
 	bind("SUPER + T", dsp.exec_cmd(terminal))
@@ -15,7 +16,7 @@ local function main()
 	bind("SUPER + E", cmd(fileManager))
 	bind("SUPER + V", dsp.window.float({ action = "toggle" }))
 	bind("SUPER + U", dsp.window.pseudo())
-	bind("SUPER + D", cmd(menu))
+	bind("SUPER + D", cmd(menu .. " --show-actions"))
 	bind("SUPER + BACKSPACE", cmd("killall waybar || hypr-waybar"))
 	bind("SUPER + P", cmd("killall hyprpicker|| hyprpicker -a"))
 	bind("SUPER + period", cmd("killall fuzzel || " .. scripts_path .. "cliphist-fuzzel-img.sh"))
@@ -43,6 +44,7 @@ local function main()
 	bind("SUPER + CTRL + G", gamemode)
 	fn()
 	windows()
+	bind("SUPER + M", create_vitual_monitor)
 end
 
 windows = function()
@@ -199,6 +201,31 @@ fn = function()
 		hl.dsp.exec_cmd("swayosd-client --playerctl play-pause"),
 		{ locked = true, repeating = true }
 	)
+end
+
+create_vitual_monitor = function()
+	local name = "Virtual-1"
+
+	local already_created = hl.get_monitor(name)
+	if already_created then
+		hl.exec_cmd("hyprctl output remove " .. name)
+		hl.exec_cmd("notify-send 'Removed Virtual monitor'")
+		return
+	end
+
+	hl.exec_cmd("hyprctl output create headless " .. name)
+	hl.monitor({
+		output = name,
+		mode = "1920x1080@60",
+		position = "auto-down",
+		scale = "2",
+	})
+	hl.workspace_rule({
+		monitor = name,
+		default = true,
+		workspace = "10",
+	})
+	hl.exec_cmd("notify-send 'Created Virtual monitor'")
 end
 
 main()
