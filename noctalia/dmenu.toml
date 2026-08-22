@@ -1,0 +1,7 @@
+[shell.launcher.dmenu.entry.layout]
+command = "printf 'Dwindle\nScrolling\nMaster\nMonocle'"
+label = "Change layout"
+prefix = "layout"
+glyph = "terminal"
+global = false
+exec = "$HOME/.config/hypr/scripts/change-layout.sh {selection}"

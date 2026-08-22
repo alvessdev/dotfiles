@@ -122,10 +122,14 @@ hl.window_rule({
 -- overlayLayerRule:set_enabled(false)
 
 hl.layer_rule({
+	name = "noctalia",
 	match = {
-		namespace = "launcher",
+		namespace = "^noctalia-(bar-.+|notification|dock|panel|attached-panel|osd|window-switcher)$",
 	},
+	no_anim = true,
+	ignore_alpha = 0.5,
 	blur = true,
+	blur_popups = true,
 })
 
 -- Hyprland-run windowrule

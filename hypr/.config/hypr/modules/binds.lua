@@ -1,11 +1,12 @@
 local dsp = hl.dsp
 local bind = hl.bind
 local cmd = dsp.exec_cmd
+local ipc = "noctalia msg "
 
 -- functions
 local windows
 local workspace
-local fn
+local noctalia
 local gamemode
 local create_vitual_monitor
 
@@ -16,33 +17,20 @@ local function main()
 	bind("SUPER + E", cmd(fileManager))
 	bind("SUPER + V", dsp.window.float({ action = "toggle" }))
 	bind("SUPER + U", dsp.window.pseudo())
-	bind("SUPER + D", cmd(menu .. " --show-actions"))
-	bind("SUPER + BACKSPACE", cmd("killall waybar || hypr-waybar"))
-	bind("SUPER + P", cmd("killall hyprpicker|| hyprpicker -a"))
-	bind("SUPER + period", cmd("killall fuzzel || " .. scripts_path .. "cliphist-fuzzel-img.sh"))
-	bind("PRINT", cmd("flameshot gui"))
-	bind("SUPER + N", cmd("swaync-client -t -sw"))
 	bind("SUPER + SHIFT + P", function()
 		hl.timer(function()
 			hl.dispatch(hl.dsp.dpms({ action = "disable" }))
 		end, { timeout = 500, type = "oneshot" })
 	end)
+	bind("SUPER + P", cmd("killall hyprpicker|| hyprpicker -a"))
 	bind(
 		"SUPER + SHIFT + E",
 		hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'")
 	)
-	bind("SUPER + Y", cmd("killall fuzzel || " .. scripts_path .. "fuzzel-change-layout.sh"))
-	bind(
-		"SUPER + SHIFT + W",
-		cmd(
-			"awww img $(shuf -e $(fd '\\.(png|jpeg|avif|jpegxl|gif|pnm|tga|tiff|webp|bmp|farbfeld|svg)$' ~/wallpapers) -n 1) --transition-type=random --transition-fps=60"
-		)
-	)
-	bind("SUPER + ALT + W", cmd("killall fuzzel || ~/dotfiles/scripts/wallpaperSelector.sh"))
+	bind("SUPER + CTRL + G", gamemode)
 
 	workspace()
-	bind("SUPER + CTRL + G", gamemode)
-	fn()
+	noctalia()
 	windows()
 	bind("SUPER + M", create_vitual_monitor)
 end
@@ -163,44 +151,21 @@ gamemode = function()
 	})
 end
 
-fn = function()
-	-- fn keys
-	hl.bind(
-		"XF86AudioRaiseVolume",
-		hl.dsp.exec_cmd("swayosd-client --output-volume 5"),
-		{ locked = true, repeating = true }
-	)
-	hl.bind(
-		"XF86AudioLowerVolume",
-		hl.dsp.exec_cmd("swayosd-client --output-volume -5"),
-		{ locked = true, repeating = true }
-	)
-	hl.bind(
-		"XF86AudioMute",
-		hl.dsp.exec_cmd("swayosd-client --output-volume mute-toggle"),
-		{ locked = true, repeating = false }
-	)
-	hl.bind(
-		"XF86AudioMicMute",
-		hl.dsp.exec_cmd("swayosd-client --input-volume mute-toggle"),
-		{ locked = true, repeating = true }
-	)
-	hl.bind("XF86AudioNext", hl.dsp.exec_cmd("swayosd-client --playerctl next"), { locked = true, repeating = true })
-	hl.bind(
-		"XF86AudioPrev",
-		hl.dsp.exec_cmd("swayosd-client --playerctl previous"),
-		{ locked = true, repeating = true }
-	)
-	hl.bind(
-		"XF86AudioPause",
-		hl.dsp.exec_cmd("swayosd-client --playerctl play-pause"),
-		{ locked = true, repeating = true }
-	)
-	hl.bind(
-		"XF86AudioPlay",
-		hl.dsp.exec_cmd("swayosd-client --playerctl play-pause"),
-		{ locked = true, repeating = true }
-	)
+noctalia = function()
+	bind("SUPER + D", cmd(ipc .. "panel-toggle launcher"))
+	bind("SUPER + BACKSPACE", cmd(ipc .. "bar-toggle"))
+	bind("SUPER + period", cmd(ipc .. "panel-toggle clipboard"))
+	bind("PRINT", cmd(ipc .. "screenshot-region"))
+	bind("SUPER + N", cmd(ipc .. "panel-toggle control-center notifications"))
+	bind("SUPER + comma", cmd(ipc .. "settings-toggle"))
+	bind("SUPER + space", cmd(ipc .. "panel-toggle control-center"))
+	bind("ALT + TAB", cmd(ipc .. "window-switcher"))
+	bind("SUPER + Y", cmd(ipc .. "panel-toggle launcher /layout"))
+
+	-- Media keys
+	bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
+	bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
+	bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
 end
 
 create_vitual_monitor = function()
