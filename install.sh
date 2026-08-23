@@ -22,11 +22,8 @@ installPrograms() {
 	echo Installing nvim
 	./scripts/install-nvim.sh
 
-	echo Installing waybar
-	./scripts/install-waybar.sh
-
-	echo Installing fuzzel
-	./scripts/install-fuzzel.sh
+	echo Installing noctalia
+	./scripts/install-noctalia.sh
 
 	echo Downloding wallpapers
 	./scripts/download-wallpapers.sh
@@ -50,6 +47,7 @@ backup() {
 	cp -L ~/.p10k.zsh ~/old-config &> /dev/null
 	cp -rL ~/.config/fuzzel/ ~/old-config &> /dev/null
 	cp -rL ~/.config/kitty/ ~/old-config &> /dev/null
+	cp -rL ~/.config/noctalia/ ~/old-config &> /dev/null
 	cd ~/dotfiles/
 }
 

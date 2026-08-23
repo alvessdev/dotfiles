@@ -42,6 +42,9 @@ widget_order = []
 
     [desktop_widgets.widget]
 
+[hooks]
+started = "$HOME/.config/noctalia/scripts/started.sh"
+
 [keybinds]
 down = [ "Down", "Ctrl+j", "Ctrl+n" ]
 left = [ "Left", "Ctrl+h" ]
@@ -141,13 +144,13 @@ wallpaper_scheme = "m3-content"
 directory = "/home/arcus/wallpapers"
 
     [wallpaper.default]
-    path = "/home/arcus/wallpapers/smile_original.png"
+    path = "/home/arcus/wallpapers/pacman_original.png"
 
     [wallpaper.last]
-    path = "/home/arcus/wallpapers/smile_original.png"
+    path = "/home/arcus/wallpapers/pacman_original.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/arcus/wallpapers/smile_original.png"
+    path = "/home/arcus/wallpapers/pacman_original.png"
 
 [widget.active_window]
 color = "tertiary"
