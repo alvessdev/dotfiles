@@ -6,6 +6,7 @@ order = [ "default" ]
 
     [bar.default]
     capsule = true
+    color = "primary"
     end = [
         "tray",
         "notifications",
@@ -17,6 +18,7 @@ order = [ "default" ]
         "control-center",
         "session"
     ]
+    icon_color = "secondary"
     start = [ "workspaces", "active_window" ]
 
         [[bar.default.capsule_group]]
@@ -28,6 +30,23 @@ order = [ "default" ]
         members = [ "network", "network_rx", "network_tx" ]
         opacity = 1.0
         padding = 6.0
+
+[desktop_widgets]
+schema_version = 2
+widget_order = []
+
+    [desktop_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget]
+
+[keybinds]
+down = [ "Down", "Ctrl+j", "Ctrl+n" ]
+left = [ "Left", "Ctrl+h" ]
+right = [ "Right", "Ctrl+l" ]
+up = [ "Up", "Ctrl+k", "Ctrl+p" ]
 
 [location]
 address = ""
@@ -122,17 +141,24 @@ wallpaper_scheme = "m3-content"
 directory = "/home/arcus/wallpapers"
 
     [wallpaper.default]
-    path = "/home/arcus/wallpapers/maze_original.png"
+    path = "/home/arcus/wallpapers/smile_original.png"
 
     [wallpaper.last]
-    path = "/home/arcus/wallpapers/maze_original.png"
+    path = "/home/arcus/wallpapers/smile_original.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/arcus/wallpapers/maze_original.png"
+    path = "/home/arcus/wallpapers/smile_original.png"
+
+[widget.active_window]
+color = "tertiary"
 
 [widget.clock]
 anchor = true
+color = "on_surface"
 
 [widget.media]
 album_art_only = true
 hide_when_no_media = true
+
+[widget.session]
+icon_color = "error"
