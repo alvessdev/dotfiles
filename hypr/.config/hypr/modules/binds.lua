@@ -163,9 +163,26 @@ noctalia = function()
 	bind("SUPER + Y", cmd(ipc .. "panel-toggle launcher /layout"))
 
 	-- Media keys
-	bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"))
-	bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"))
+	bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd(ipc .. "volume-up"), { repeating = true })
+	bind("XF86AudioLowerVolume", hl.dsp.exec_cmd(ipc .. "volume-down"), { repeating = true })
 	bind("XF86AudioMute", hl.dsp.exec_cmd(ipc .. "volume-mute"))
+
+	bind("XF86AudioNext", hl.dsp.exec_cmd("noctalia msg media next"), { locked = true, repeating = true })
+	bind(
+		"XF86AudioPrev",
+		dsp.exec_cmd("noctalia msg media previous"),
+		{ locked = true, repeating = true }
+	)
+	bind(
+		"XF86AudioPause",
+		dsp.exec_cmd("noctalia msg media pause"),
+		{ locked = true, repeating = true }
+	)
+	bind(
+		"XF86AudioPlay",
+		dsp.exec_cmd("noctalia msg media play"),
+		{ locked = true, repeating = true }
+	)
 end
 
 create_vitual_monitor = function()
