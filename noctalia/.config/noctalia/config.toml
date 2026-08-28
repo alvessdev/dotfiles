@@ -112,16 +112,19 @@ password_style = "random"
 polkit_agent = true
 show_location = false
 
-    [shell.launcher.dmenu.entry.layout]
-    command = """printf 'Dwindle
+    [shell.launcher]
+    show_app_actions = true
+
+        [shell.launcher.dmenu.entry.layout]
+        command = """printf 'Dwindle
 Scrolling
 Master
 Monocle'"""
-    exec = "$HOME/.config/hypr/scripts/change-layout.sh {selection}"
-    global = false
-    glyph = "terminal"
-    label = "Change layout"
-    prefix = "layout"
+        exec = "$HOME/.config/hypr/scripts/change-layout.sh {selection}"
+        global = false
+        glyph = "terminal"
+        label = "Change layout"
+        prefix = "layout"
 
     [shell.panel]
     control_center_position = "center"
@@ -144,13 +147,13 @@ wallpaper_scheme = "m3-content"
 directory = "/home/arcus/wallpapers"
 
     [wallpaper.default]
-    path = "/home/arcus/wallpapers/pacman_original.png"
+    path = "/home/arcus/wallpapers/crosses_original.png"
 
     [wallpaper.last]
-    path = "/home/arcus/wallpapers/pacman_original.png"
+    path = "/home/arcus/wallpapers/crosses_original.png"
 
     [wallpaper.monitors.HDMI-A-1]
-    path = "/home/arcus/wallpapers/pacman_original.png"
+    path = "/home/arcus/wallpapers/crosses_original.png"
 
 [widget.active_window]
 color = "tertiary"
@@ -165,3 +168,7 @@ hide_when_no_media = true
 
 [widget.session]
 icon_color = "error"
+
+[widget.workspaces]
+label_source = "name"
+max_label_chars = 20

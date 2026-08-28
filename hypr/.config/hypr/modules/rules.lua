@@ -43,6 +43,7 @@ for i = 1, #floatWindows do
 end
 
 --games rules
+hl.workspace_rule({ workspace = "11", persistent = false, default_name = "" })
 -- initial_class of games
 local games = { "^(steam_app_.*)$", "^(Minecraft*.*)$", "^(blackops.*)$", "^(Hollow.*)$" }
 
