@@ -9,6 +9,7 @@ return {
 			"hyprls",
 			"jsonls",
 			"clangd",
+			"jdtls"
 		},
 	},
 	dependencies = {
