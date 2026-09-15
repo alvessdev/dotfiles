@@ -22,6 +22,9 @@ installPrograms() {
 	echo Installing nvim
 	./scripts/install-nvim.sh
 
+	echo Installing tmux
+	./scripts/install-tmux.sh
+
 	echo Installing noctalia
 	./scripts/install-noctalia.sh
 
@@ -48,6 +51,7 @@ backup() {
 	cp -rL ~/.config/fuzzel/ ~/old-config &> /dev/null
 	cp -rL ~/.config/kitty/ ~/old-config &> /dev/null
 	cp -rL ~/.config/noctalia/ ~/old-config &> /dev/null
+	cp -rL ~/.config/tmux/ ~/old-config &> /dev/null
 	cd ~/dotfiles/
 }
 
