@@ -113,6 +113,7 @@ source "$ZSH/oh-my-zsh.sh"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias l="eza --no-user --no-filesize --no-git --no-permissions --no-time -l --icons"
 alias ls="eza --icons --no-filesize -l --no-time"
 alias lsa="eza --icons -la --git --header"
 alias cat="bat"
