@@ -1,7 +1,7 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 # BEGIN_KITTY_THEME
-# Base2Tone Mall Dark
+# Tokyo Night
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -25,7 +25,7 @@ include current-theme.conf
 #: <https://sw.kovidgoyal.net/kitty/kittens/choose-fonts/#font-spec-
 #: syntax>.
 
-# font_size 11.0
+font_size 12.0
 
 #: Font size (in pts).
 
@@ -430,7 +430,7 @@ scrollback_lines 10000
 #: position will only move towards the position by a single screenful,
 #: which is how traditional scrollbars behave.
 
-scrollbar_width 0.8
+scrollbar_width 0.0
 
 #: The width of the scroll bar in units of cell width.
 
@@ -1324,7 +1324,7 @@ tab_bar_style powerline
 #: The horizontal alignment of the tab bar, can be one of: left,
 #: center, right.
 
-tab_bar_min_tabs 1
+# tab_bar_min_tabs 1
 
 #: The minimum number of tabs that must exist before the tab bar is
 #: shown.
@@ -1436,12 +1436,11 @@ tab_bar_min_tabs 1
 
 #: Template to use for active tabs. If not specified falls back to
 #: tab_title_template.
-
-active_tab_foreground   #E4E4E4
-active_tab_background   #7AA2F7
+# active_tab_foreground   #E4E4E4
+# active_tab_background   #7AA2F7
 active_tab_font_style   bold-italic
-inactive_tab_foreground #444
-inactive_tab_background #2D2154
+# inactive_tab_foreground #444
+# inactive_tab_background #2D2154
 inactive_tab_font_style normal
 
 #: Tab bar colors and styles.
@@ -2449,8 +2448,9 @@ inactive_tab_font_style normal
 
 #: Close window
 
-#w map kitty_mod+w close_window
+# map kitty_mod+w close_window
 # map shift+cmd+d close_window
+map kitty_mod+c close_window
 
 #: Next window
 
@@ -2551,22 +2551,24 @@ inactive_tab_font_style normal
 # map kitty_mod+right next_tab
 # map shift+cmd+]     next_tab
 # map ctrl+tab        next_tab
+map kitty_mod+l next_tab
 
 #: Previous tab
 
 # map kitty_mod+left previous_tab
 # map shift+cmd+[    previous_tab
 # map ctrl+shift+tab previous_tab
+map kitty_mod+h previous_tab
 
 #: New tab
 
-map kitty_mod+q new_tab
-map cmd+q       new_tab
+# map kitty_mod+t new_tab
+# map cmd+t       new_tab
 
 #: Close tab
 
-map kitty_mod+w close_tab
-map cmd+w       close_tab
+# map kitty_mod+q close_tab
+# map cmd+w       close_tab
 
 #: Close OS window
 
@@ -2958,7 +2960,7 @@ map cmd+w       close_tab
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="JetBrainsMonoNL Nerd Font Mono"
+font_family      family="IosevkaTerm Nerd Font Mono"
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
