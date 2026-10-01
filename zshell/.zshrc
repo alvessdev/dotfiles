@@ -116,9 +116,7 @@ source "$ZSH/oh-my-zsh.sh"
 alias l="eza --no-user --no-filesize --no-git --no-permissions --no-time --icons -l"
 alias ls="eza --icons --no-filesize -l --no-time"
 alias lsa="eza --icons -la --git --header"
-alias cat="bat"
 alias grep="rg"
-alias code="codium"
 alias v="nvim"
 alias nvimf='nvim $(fd --hidden --type f | fzf)'
 alias cdf='cd $(fd --full-path . ~ --hidden --type d | fzf)'
