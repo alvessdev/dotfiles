@@ -119,7 +119,7 @@ alias lsa="eza --icons -la --git --header"
 alias grep="rg"
 alias v="nvim"
 alias nvimf='nvim $(fd --hidden --type f | fzf)'
-alias cdf='cd $(fd --full-path . ~ --hidden --type d | fzf)'
+alias cdf='cd "$(fd --full-path . --hidden --type d | fzf)"'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
