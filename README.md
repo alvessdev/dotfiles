@@ -5,6 +5,4 @@ use at your own risk
 
 how to install
 `cd ~/dotfiles`
-`./install hyprland`
-or
-`./install niri`
+`./install.sh`

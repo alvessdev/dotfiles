@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 main () {
-	if [[ $# -eq 0 ]] then
-		echo "Usage: install <argument>"
-		echo "Arguments: niri or hyprland"
-	elif [[ $1 == "hyprland" ]] then
-		installHyprland
-	elif [[ $1 == "niri" ]] then
-		installNiri
-	else
-		echo Invalid argument
-	fi
+	installHyprland
 }
 
 installPrograms() {
@@ -53,15 +44,6 @@ backup() {
 	cp -rL ~/.config/noctalia/ ~/old-config &> /dev/null
 	cp -rL ~/.config/tmux/ ~/old-config &> /dev/null
 	cd ~/dotfiles/
-}
-
-installNiri() {
-	backup
-	cp -rL ~/.config/niri ~/old-config &> /dev/null
-
-	echo Installing niri
-	./scripts/install-niri.sh
-	installPrograms
 }
 
 main $*
