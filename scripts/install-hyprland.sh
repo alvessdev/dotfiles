@@ -2,7 +2,7 @@
 sudo pacman -S --needed --noconfirm stow hyprland curl stow \
 	hypridle qt5-wayland qt6-wayland xdg-desktop-portal-hyprland \
 	xdg-desktop-portal-gtk xdg-desktop-portal wl-clipboard \
-	xdg-utils go nautilus btop hyprpicker pavucontrol
+	xdg-utils go nautilus btop hyprpicker pavucontrol wget \
 	
 	
 echo dwindle > hypr/.config/hypr/modules/.active_layout
