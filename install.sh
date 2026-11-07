@@ -21,6 +21,9 @@ installPrograms() {
 
 	echo Downloding wallpapers
 	./scripts/download-wallpapers.sh
+
+	echo Downloding rose pine cursor
+	./scripts/install-rose-pine-cursor.sh
 }
 
 installHyprland() {
